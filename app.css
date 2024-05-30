@@ -2,33 +2,34 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
-  background-color: #e4e4de;
+  font-family: "Work Sans", sans-serif;
+  background-color: #30216e;
+}
+
+body {
+  background-image: url("img/background.png"); /* Replace 'path/to/your/image.jpg' with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  font-family: "Work Sans", sans-serif; /* Apply font family */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 a {
-  color: rgb(38, 76, 89);
-}
-
-header {
-  background-color: #3f2305;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-header h1 {
-  color: white;
-  padding: 1em;
-  margin: 0;
+  color: rgb(255, 255, 255);
 }
 
 p {
   line-height: 1.5em;
   font-weight: 200;
+  color: whitesmoke;
+  margin: 30px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1em;
   padding: 2em;
 }
@@ -36,7 +37,6 @@ p {
 .grid-item {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   padding: 1.5em;
-  background-color: #f1f1f1;
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 10px;
@@ -60,4 +60,92 @@ p {
   to {
     opacity: 1;
   }
+}
+
+/* Styling for the header */
+header {
+  padding: 10px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  padding: 10px;
+}
+
+/* Styling for the about section */
+#about-section {
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  margin: 10px;
+  height: 90vh;
+}
+
+#posts-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Styling for individual UI cards */
+.grid-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  width: 100%; /* Make each card take the full width of its container */
+  max-width: 1300px; /* Optionally, set a max width for each card */
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the image within the card */
+.grid-item img {
+  max-width: 350px; /* Set a fixed max width for the image */
+  margin-right: 20px; /* Space between the image and the text */
+}
+
+/* Styling for the text within the card */
+.grid-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item h2,
+.grid-item p {
+  margin: 5px 0; /* Adjust margin to reduce spacing */
+}
+
+/* "Ready to explore?" button */
+.explore-button {
+  font-family: Work Sans;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 25px; /* Rounded corners */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: #333;
 }

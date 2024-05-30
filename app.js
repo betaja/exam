@@ -28,14 +28,23 @@ function displayPostsGrid(posts) {
       `
       <article class="grid-item">
         <img src="${post.acf.image}" alt="${post.title.rendered}" />
+        <div>
         <h2>${post.title.rendered}</h2>
         <p> ${post.acf.type}</p>
         <br>
-        <p><strong>Project description:</strong> ${post.acf.description}</p>
+        <p>${post.acf.description}</p>
         <p><strong>Client:</strong> ${post.acf.client}</p>
         <a href="${post.acf.link}" target="_blank">View Project</a>
+        </div>
       </article>
       `
     );
   }
+}
+
+//extras
+
+// Function to scroll smoothly to the projects section
+function scrollToProjects() {
+  document.getElementById("posts-grid").scrollIntoView({ behavior: "smooth" });
 }
