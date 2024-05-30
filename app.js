@@ -30,11 +30,11 @@ function displayPostsGrid(posts) {
         <img src="${post.acf.image}" alt="${post.title.rendered}" />
         <div>
         <h2>${post.title.rendered}</h2>
-        <p> ${post.acf.type}</p>
+        <h3> ${post.acf.type}</h3>
         <br>
         <p>${post.acf.description}</p>
         <p><strong>Client:</strong> ${post.acf.client}</p>
-        <a href="${post.acf.link}" target="_blank">View Project</a>
+        <a href="${post.acf.link}" target="_blank">View Project Here</a>
         </div>
       </article>
       `
